@@ -18,6 +18,8 @@ def hangman():
 
     #getting user input
     while len(word_letters) > 0:
+        print("You have guessed the letters: ", " ".join(used_letters))
+
         user_letter = str(input("Guess a letter: "))
         if user_letter in alphabet - used_letters:
             used_letters.add(user_letter)
