@@ -22,10 +22,10 @@ def hangman():
     while len(word_letters) > 0 and lives > 0:
         print(f"You have {lives} lives left. You have guessed the letters: ", " ".join(used_letters))
 
-        word_list = [letter if  letter in used_letters else '_' for letter in word]
+        word_list = [letter if letter in used_letters else '_' for letter in word]
         print("Current word: ", " ".join(word_list))
 
-        user_letter = str(input("Guess a letter: "))
+        user_letter = str(input("Guess a letter: ")).upper()
         if user_letter in alphabet - used_letters:
             used_letters.add(user_letter)
             if user_letter in word_letters:
